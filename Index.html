@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="all">
+      <div class="myHeaderBackground">
+        <ul class="menu">
+          <li class="header selected">My Tasks</li>
+          <li class="header">In Progress</li>
+          <li class="header">Completed</li>
+        </ul>
+      </div>
+      <div id="main">
+        <div class="content">
+          <div class="content-input">
+            <input type="checkbox" />
+            Type Something Here...
+          </div>
+          <div class="content-edit">
+            <i class="far fa-star star"></i>
+            <i class="fas fa-pencil-alt blue-pancil"></i>
+          </div>
+        </div>
+
+        <h2 class="title"><i class="far fa-calendar-alt icon"></i>Deadline</h2>
+
+        <div class="title-under">
+          <input type="text" placeholder="yyyy/mm/dd" />
+          <input type="text" placeholder="hh:mm" />
+        </div>
+
+        <h2 class="title"><i class="far fa-file icon"></i>File</h2>
+        <div class="title-under">
+          <i class="fas fa-plus"></i>
+        </div>
+
+        <h2 class="title"><i class="fas fa-comment-dots icon"></i>Comment</h2>
+
+        <textarea class="text" placeholder="Type your memo here..."></textarea>
+        <div class="button">
+          <button class="cancel">
+            <i class="fas fa-times icon"></i>Cancel
+          </button>
+          <button class="add"><i class="fas fa-plus icon"></i>Add Task</button>
+        </div>
+      </div>
+      <div class="area yellow">
+        <div class="content-input">
+          <input type="checkbox" />
+          Type Something Here...
+        </div>
+        <div class="bottom-second">
+          <i class="far fa-calendar-alt"></i>
+          <p class="test">5/14</p>
+          <i class="far fa-file"></i><i class="fas fa-comment-dots"></i>
+        </div>
+        <div class="content-bottom">
+          <i class="far fa-star star star-yellow"></i>
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+      </div>
+      <div class="area yellow">
+        <div class="content-input">
+          <input type="checkbox" />
+          Type Something Here...
+        </div>
+        <div class="content-bottom">
+          <i class="far fa-star star star-yellow"></i>
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+      </div>
+      <div class="area">
+        <div class="content-input">
+          <input type="checkbox" />
+          Type Something Here...
+        </div>
+        <div class="content-bottom">
+          <i class="far fa-star star"></i>
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+      </div>
+      <div class="area">
+        <div class="content-input">
+          <input type="checkbox" />
+          Type Something Here...
+        </div>
+        <div class="content-bottom">
+          <i class="far fa-star star"></i>
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+      </div>
+      <div class="inTheBottom">
+        <div class="content-input-line-through">
+          <input type="checkbox" checked />
+          Type Something Here...
+        </div>
+        <div class="content-bottom">
+          <i class="far fa-star star"></i>
+          <i class="fas fa-pencil-alt"></i>
+        </div>
+      </div>
+      <div class="inTheBottom-text">
+        <p id="bottom_text">4 tasks left</p>
+      </div>
+    </div>
+  </body>
+</html>
