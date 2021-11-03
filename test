@@ -51,51 +51,47 @@ namespace Rextester
             Solution so = new Solution();
             var data = so.RomToInt("I");
              Console.WriteLine(data);
+			 
+			  int[] d = new int[3]{2,0,1};
+           so.SortCol(d);
            
         }
          public class Solution
          {
-             public int RomToInt(string s)
-             {      
-                 int output =0;
-                 
-                 switch(s)
-                 {
-                     case "I":
-                         output = 1;
-                         break;
-                     case "L":
-                         output = 50;
-                         break;
-                     case "C" :
-                         output = 100;
-                         break;
-                     case "D" :
-                         output = 500;
-                     break;
-                     case "M" :
-                         output = 1000;
-                     break;
-                     case "X" :
-                         output = 10;
-                     break;
-                     case "V" :
-                         output = 5;
-                     break;
-                     
-                 }
-                 
-                return output;
-             }
+              static readonly Dictionary<char, int> dict = new Dictionary<char, int>
+        {
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+        };
+
+        public int RomToInt(string s)
+        {
+            int sum = 0;
+            for(int i = 0;i < s.Length;i++)
+            {
+                int currentValue = dict[s[i]];
+                if(i == s.Length - 1 || dict[s[i + 1]] <= currentValue)
+                    sum += currentValue;
+                else
+                    sum -= currentValue;
+            }
+            return sum;
+        }
+		
              public void SortCol(int[] nums)
              {
-                 var length = nums.Length;
-                 int[] output = new int[length];
-                 for(int i =0; i <=length; i++)
+                
+                 Array.Sort(nums);
+                 foreach(var i in nums)
                  {
-                     
-                     output.add(nums[i]);
+                     Console.WriteLine(i+",");
                  }
+           
              }
         }
     }
@@ -112,3 +108,9 @@ Left join Address a on p.PersonId = a.PersonId
 TempData 可以跨Action使用，資料會儲存在Session 中，其生命週期為一個 Request
 ViewData 存放在物件中，生命週期為一個頁面。
 ViewBag 生命週期為一個頁面，使用 dynamic 型別，可免去手動轉型的麻煩
+6.
+Action Filters
+Authorization Filters
+Result Filters
+Exception Filters
+Action Filters: 
