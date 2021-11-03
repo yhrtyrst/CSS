@@ -34,6 +34,73 @@
 </body>
 </html>
 
+2.3.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+          
+            Solution so = new Solution();
+            var data = so.RomToInt("I");
+             Console.WriteLine(data);
+           
+        }
+         public class Solution
+         {
+             public int RomToInt(string s)
+             {      
+                 int output =0;
+                 
+                 switch(s)
+                 {
+                     case "I":
+                         output = 1;
+                         break;
+                     case "L":
+                         output = 50;
+                         break;
+                     case "C" :
+                         output = 100;
+                         break;
+                     case "D" :
+                         output = 500;
+                     break;
+                     case "M" :
+                         output = 1000;
+                     break;
+                     case "X" :
+                         output = 10;
+                     break;
+                     case "V" :
+                         output = 5;
+                     break;
+                     
+                 }
+                 
+                return output;
+             }
+             public void SortCol(int[] nums)
+             {
+                 var length = nums.Length;
+                 int[] output = new int[length];
+                 for(int i =0; i <=length; i++)
+                 {
+                     
+                     output.add(nums[i]);
+                 }
+             }
+        }
+    }
+}
+
 
 
 
