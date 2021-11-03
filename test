@@ -1,0 +1,47 @@
+1.
+<html>
+<head>
+</head>
+<body>
+
+<div>
+<table style="border:3px #cccccc solid;" cellpadding="10" border='1'>
+  <thead>
+  <tr>
+    <th>Header1</th>
+    <th>Header2</th>
+    <th>Header3</th>
+    <th>Header4</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td rowspan="2" ></td>
+    <td colspan="3" ></td>
+   
+ </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+   
+  </tr>
+  
+  </tbody>
+</table>
+</div>
+
+</body>
+</html>
+
+
+
+
+4.
+Select p.FirstName, p.LastName, a.City, a.State
+From Person p
+Left join Address a on p.PersonId = a.PersonId
+5.
+TempData 可以跨Action使用，資料會儲存在Session 中，其生命週期為一個 Request
+ViewData 存放在物件中，生命週期為一個頁面。
+ViewBag 生命週期為一個頁面，使用 dynamic 型別，可免去手動轉型的麻煩
